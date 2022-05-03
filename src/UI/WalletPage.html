@@ -1,0 +1,139 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: dimgray;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: dimgray;  
+}  
+form{
+    width: 50%;
+    margin-left: 25% ;
+}
+input{  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: whitesmoke;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: lightgray;  
+  outline: none;  
+}  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.depositbtn {  
+  background-color: whitesmoke;  
+  color: dimgray;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.depositbtn:hover {  
+  opacity: 1;  
+} 
+
+nav {
+    background: black;
+    top: 0;
+    width: 100%;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fixed-nav nav{
+    position: fixed;
+      box-shadow: 0 5 px rgba(0, 0, 0, 0.1);
+      
+}
+  
+  nav ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  li.logo {
+    max-width: 0;
+    overflow: hidden;
+    background: white;
+    transition: all 2s;
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  .fixed-nav li.logo{
+      max-width: 500px;
+  }
+  
+  li.logo a {
+    color: black;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+</style>  
+</head>  
+<body>  
+
+  <nav id="main">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Market</a></li>
+      <li><a href="#">Social</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Wallet</a></li>
+    </ul>
+  </nav>
+<form action="">   
+    <div class="container">  
+        <center>  <h1>Wallet</h1> </center>  
+        <hr>  
+<label> Name on Card </label>   
+<input type="text" name="nameoncard" placeholder= "nameoncard" size="15" required />   
+
+<label> Card Number: </label>   
+<input type="number" name="cardnumber" placeholder="cardnumber" size="15" required />   
+
+<label> Expiration Date </label>    
+<input type="month" name="exdate" placeholder="Expiration Date" size="15"required />     
+ 
+<label >Cvv</label>  
+<input type="number" placeholder="cvv" name="email" size="3" required>  
+  
+<label>Deposit Amount</label>  
+<input type="number" placeholder="Deposit Amount" required>  
+
+<button type="submit" class="depositbtn">Deposit</button>    
+
+</form>  
+</body> 
+</html>  
