@@ -30,6 +30,7 @@ class Server {
     }
 
     private routerConfig() {
+        this.app.get('/', function(req, res) {res.sendFile("/usr/src/app/src/UI/LoginPage.html"); });
         this.app.use('/users',UserController.getUser);
         this.app.use('/usersDeposit',UserController.getUserDeposit);
         this.app.use('/test',TestController.get);
